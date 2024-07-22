@@ -18,7 +18,7 @@ function TextInput() {
   <>
     <form className="guess-input-wrapper" onSubmit={handleSubmit}>
       <label htmlFor="guess-input">Enter guess:</label>
-      <input id="guess-input" minLength={5} maxLength={5} type="text" value={guess} onChange={(event) => {
+      <input id="guess-input" pattern="[a-zA-Z]{5}" title='5 letter word' type="text" value={guess} onChange={(event) => {
         setGuess(event.target.value.toUpperCase())
       }}/>
     </form>
