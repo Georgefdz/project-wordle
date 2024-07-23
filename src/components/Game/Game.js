@@ -15,8 +15,8 @@ function Game() {
 
   return (
   <>
-    <TextInput wordList={wordList} setWordList={setWordList}/>
     <GuessResults wordList={wordList}/>
+    <TextInput wordList={wordList} setWordList={setWordList}/>
   </>
 )}
 
