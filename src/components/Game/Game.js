@@ -3,6 +3,7 @@ import React from 'react';
 import { sample } from '../../utils';
 import { WORDS } from '../../data';
 import TextInput from '../TextInput/TextInput';
+import GuessResults from '../GuessResults/GuessResults';
 
 // Pick a random word on every pageload.
 const answer = sample(WORDS);
@@ -10,9 +11,12 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
+  const [wordList, setWordList] = React.useState([])
+
   return (
   <>
-    <TextInput />
+    <TextInput wordList={wordList} setWordList={setWordList}/>
+    <GuessResults wordList={wordList}/>
   </>
 )}
 
